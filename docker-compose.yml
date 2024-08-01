@@ -28,7 +28,7 @@ services:
         condition: service_healthy
     image: "mongo:${MONGO_VERSION}"
     command: ["--replSet", "${MONGO_REPLICA_SET}", "--port", "${MONGO_1_PORT}"]
-    user: 990:0
+    user: 0:990
     ports:
       - "${MONGO_1_PORT}:${MONGO_1_PORT}"
     volumes:
