@@ -245,7 +245,7 @@ services:
     ports:
       - "${ANY_SYNC_CONSENSUSNODE_PORT}:${ANY_SYNC_CONSENSUSNODE_PORT}"
       - "${ANY_SYNC_CONSENSUSNODE_QUIC_PORT}:${ANY_SYNC_CONSENSUSNODE_QUIC_PORT}/udp"
-      - 8096:8000
+      - 8006:8000
     volumes:
       - ./etc/any-sync-consensusnode/:/etc/any-sync-consensusnode/
       - "${STORAGE_DIR}/networkStore/any-sync-consensusnode/:/networkStore/"
