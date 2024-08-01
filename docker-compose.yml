@@ -30,6 +30,7 @@ services:
     command: ["--replSet", "${MONGO_REPLICA_SET}", "--port", "${MONGO_1_PORT}"]
     ports:
       - "${MONGO_1_PORT}:${MONGO_1_PORT}"
+    user: "1000:1000"
     environment:
       - UID=1000
       - GID=1000
