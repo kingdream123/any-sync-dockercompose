@@ -1,4 +1,4 @@
 FROM mongo:7.0.2
-RUN groupmod --gid 1000 mongodb; \
-	usermod --uid 1000 mongodb; \
+RUN groupmod --gid 0 mongodb; \
+	usermod --uid 0 mongodb; \
 	chown -R mongodb:mongodb /data/db /data/configdb

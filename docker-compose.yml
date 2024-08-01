@@ -30,7 +30,7 @@ services:
     build:
       context: .
       dockerfile: "./Dockerfile-mongodb"
-    user: "1000:1000"
+    user: "0:0"
     command: ["--replSet", "${MONGO_REPLICA_SET}", "--port", "${MONGO_1_PORT}"]
     ports:
       - "${MONGO_1_PORT}:${MONGO_1_PORT}"
