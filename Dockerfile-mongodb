@@ -1,0 +1,4 @@
+FROM mongo:7.0.2
+RUN groupmod --gid 1200 mongodb; \
+	usermod --uid 1200 mongodb; \
+	chown -R mongodb:mongodb /data/db /data/configdb

@@ -9,7 +9,7 @@ Self-host for any-sync, designed for personal usage or for review and testing pu
 > Before upgrading please read [Upgrade-Guide](../../wiki/Upgrade-Guide)
 
 ## Documentation
-All of the documentation for this repository is located in the [Wiki](../../wiki).  
+All of the documentation for this repository is located in the [Wiki](../../wiki).
 Please visit the Wiki for comprehensive guides, installation instructions and more.
 
 ## Getting Started
@@ -23,7 +23,7 @@ To get started, follow these steps:
     ```bash
     cd any-sync-dockercompose
     ```
-3. **Install the necessary dependencies:**  
+3. **Install the necessary dependencies:**
     You need to install Docker and Docker Compose https://docs.docker.com/compose/install/
 4. **Run the project:**
     ```bash
@@ -47,3 +47,9 @@ Thank you for your desire to develop Anytype together!
 Made by Any — a Swiss association 🇨🇭
 
 Licensed under [MIT](./LICENSE.md).
+
+## 增加 MongoDB 的 UID/GID 自定义
+
+https://stackoverflow.com/questions/57364872/docker-sets-wrong-owner-for-mongodb-mounted-volume
+
+https://github.com/superstes/docker-mongodb-uid

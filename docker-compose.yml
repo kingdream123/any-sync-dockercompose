@@ -26,7 +26,11 @@ services:
     depends_on:
       generateconfig-processing:
         condition: service_healthy
-    image: "mongo:${MONGO_VERSION}"
+    image: "local/mongo:${MONGO_VERSION}"
+    build:
+      context: .
+      dockerfile: "./Dockerfile-mongodb"
+    user: "1200:1200"
     command: ["--replSet", "${MONGO_REPLICA_SET}", "--port", "${MONGO_1_PORT}"]
     ports:
       - "${MONGO_1_PORT}:${MONGO_1_PORT}"
