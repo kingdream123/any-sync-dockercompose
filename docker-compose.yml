@@ -30,6 +30,9 @@ services:
     command: ["--replSet", "${MONGO_REPLICA_SET}", "--port", "${MONGO_1_PORT}"]
     ports:
       - "${MONGO_1_PORT}:${MONGO_1_PORT}"
+    environment:
+      - UID=1000
+      - GID=1000
     volumes:
       - "${STORAGE_DIR}/mongo-1/:/data/db"
     healthcheck:
